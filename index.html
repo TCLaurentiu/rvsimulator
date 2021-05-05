@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<title>Simulator de v.a</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<header><span>Simulator de variabile aleatoare</span></header>
+	<main>
+		<div class="choices">
+			<div class="choices-left">
+		<div class="choice choice-1 type-choice">
+			<span class="choice-label"><span>1</span>Alege tipul de variabila</span>
+			<div class="options"><span class="v-choice-active">Variabila discreta</span>
+				<span>Variabila continua</span>
+			</div>
+		</div>
+		<div class="choice choice-2 d-choice d-active">
+			<span class="choice-label"><span>2</span>Alege distributia variabilei</span>
+			<div class="options">
+			</div>
+		</div>
+		<div class="choice choice-2 d-choice hidden">
+			<span class="choice-label"><span>2</span>Alege distributia variabilei</span>
+			<div class="options">
+			</div>
+		</div>
+	</div>
+	<div class="choices-right">
+		<div class="choice choice-3 r-choice r-active">
+			<span class="choice-label"><span>3</span>Alege generatorul de numere aleatoare</span>
+			<div class="options">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="data-input hidden">
+		<span class="name"></span>
+		<span class="type"></span>
+		<span class="back">Inapoi</span>
+		<div class="wrap">
+		<div class="info">
+			<span class="desc"></span>
+			<div class="formulas">
+			<span class="formula formula-mean"><label>Medie teoretica</label><span></span></span>
+			<span class="formula formula-variation"><label>Variatie teoretica</label><span></span></span>
+		</div>
+		</div>
+		<form novalidate="">
+		<div class="inputs"></div>
+		<input type="submit" value="Simuleaza">
+	</form>
+</div>
+	<div class="results hidden">
+		<div class="plot-menu"><span class="plot-menu-active">Valori</span><span>Grafic valori</span></div>
+		<div class="numeric-results"><span class="mean"><label>Medie</label><span></span></span>
+		<span class="tmean"><label>Medie teoretica</label><span></span></span>
+		<span class="variation"><label>Variatie</label><span></span></span>
+		<span class="tvariation"><label>Variatie teoretica</label><span></span></span>
+	</div>
+		<div class="plot">
+		<div class="plot-data">
+			<span class="valori plot-active">
+				<input type="number" placeholder="valoare">
+				<span class="val-ap"><label>Aparitii</label><span>-</span></span>
+				<span class="val-prob"><label>Probabilitate</label><span>-</span></span>
+				<span class="val-prob-teo"><label>Probabilitate teoretica</label><span>-</span></span>
+			</span>
+			<span class="plot-valori"><canvas class="plot-canvas" width="1000px" height="300px"></canvas></span>
+			<span class="plot-distributie"><canvas class="distri-canvas" width="1000px" height="300px"></canvas></span>
+			<span class="plot-repartitie">rep</span>
+		</div></div>
+		<div class="plot-explanation"><span>Introdu o valoare ce o poate lua variabila pentru a obtine informatii despre aceasta</span></div>
+	</div>
+	</div>
+	</main>
+	<script src="js/functions/erf.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="js/rngs/random.js"></script>
+	<script src="js/rngs/lcg.js"></script>
+	<script src="js/rngs/rngs.js"></script>
+	<script src="js/distributions/discrete/bernoulli.js"></script>
+	<script src="js/distributions/discrete/binomial.js"></script>
+	<script src="js/distributions/discrete/geometric.js"></script>
+	<script src="js/distributions/discrete/poisson.js"></script>
+	<script src="js/distributions/discrete/hiper.js"></script>
+	<script src="js/distributions/discrete/uniformd.js"></script>
+	<script src="js/distributions/data.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/main.js"></script>
+</body>	
+</html>
