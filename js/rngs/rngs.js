@@ -1,14 +1,14 @@
-let rngs=[
-{
-	name:"Functia random din Javascript",
-	generate:random,
+let rngs = [{
+    name: "Functia random din Javascript",
+    generate: random,
 }, {
-	name:"Generatorul linear congruential",
-	generate:lcg,
+    name: "Generatorul linear congruential",
+    generate: lcg,
 }, {
-	name:"Mersenne Twister",
+    name: "Mersenne Twister",
+    generate: extractNumber
 }, {
-	name:"Xorshift",
-}
-];
- let generator=rngs[0];
+    name: "Xorshift",
+    generate: xGet
+}];
+let generator = rngs[0];

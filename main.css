@@ -1,261 +1,274 @@
-*{
-	margin:0;
-	padding:0;
-	font-size:18px;
-	font-family:sans-serif;
-	box-sizing:border-box;
-	position:relative;
-	transition-timing-function: cubic-bezier(.86,0,.07,1);
-	transition-duration:.4s;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
 }
 
-:root{
-	--shadow:0 3px 6px rgba(0, 0, 0, 0.16);
+:root {
+  --shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-body{
-	background:#f2f2f2;
+body {
+  background: #f2f2f2;
 }
-header{
-	background:white;
-	padding:20px;
-  padding-top:50px;
-  box-shadow:var(--shadow);
+header {
+  background: white;
+  padding: 20px;
+  padding-top: 50px;
+  box-shadow: var(--shadow);
 }
-header>span{
-	font-size:25px;
-}
-
-.choices{
-	padding:100px;
-	display:flex;
-}
-.choices-left{
-	width:100%;
+header > span {
+  font-size: 25px;
 }
 
-.choice{
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	margin-bottom:10px;
+.choices {
+  padding: 100px;
+  display: flex;
+}
+.choices-left {
+  width: 100%;
 }
 
-.choice-label{
-	font-size:20px;
-padding:5px;
-display:table;
+.choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.options>span{
-	background:white;
-  margin:5px;
-	padding:15px;
-	display:inline-table;
-	cursor:pointer;
-	border:1px solid #eee;
+.choice-label {
+  font-size: 20px;
+  padding: 5px;
+  display: table;
 }
 
-.options>span:hover, .v-choice-active, .r-choice-active{
-	box-shadow:var(--shadow);
-	color:white;
-	background:#2f2f2f !important;
-}
-.choice-label>span{
-	background:blueviolet;
-	color:white;
-	top:-2px;
-	border-radius:100%;
-  padding-left:5px;
-	padding-right:5px;
-margin-right:5px;
-}
-.hidden{
-	display:none !important;
-}
-.d-active{
-	display:flex !important;
-}
-.choice-2{
-	display:none;
-}
-.data-input{
-	margin:20px;
-}
-.name, .type{
-	background:blueviolet;
-	color:white;
-	padding:5px;
-	display:table;
-	font-size:20px;
-	border-radius:10%;
-	display:inline;
-}
-.desc{
-	display:table;
-	margin-bottom:10px;
+.options > span {
+  background: white;
+  margin: 5px;
+  padding: 15px;
+  display: inline-table;
+  cursor: pointer;
+  border: 1px solid #eee;
 }
 
-form{
-  margin-top:10px;
+.options > span:hover,
+.v-choice-active,
+.r-choice-active {
+  box-shadow: var(--shadow);
+  color: white;
+  background: #2f2f2f !important;
 }
-.inputs span>*{
-	display:table;
+.choice-label > span {
+  background: #3c85a8;
+  color: white;
+  top: -2px;
+  border-radius: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
 }
-.inputs input{
-	margin-bottom:5px;
-	margin-top:2px;
+.hidden {
+  display: none !important;
 }
-input[type="text"], input[type="number"]{
-	background:#eee;
-	border:none;
-  padding:5px;
-	border:2px solid white;
+.d-active {
+  display: flex !important;
 }
-input[type="text"]:hover, input[type="number"]:hover{
-	border-color:blueviolet;
+.choice-2 {
+  display: none;
 }
-input[type="submit"]{
-	background:limegreen;
-	border:2px solid limegreen;
-	padding:5px;
-	color:white;
-	cursor:pointer;
+.data-input {
+  margin: 20px;
 }
-input[type="submit"]:hover{
-	background:white;
-	color:limegreen;
+.name,
+.type {
+  background: #3c85a8;
+  color: white;
+  padding: 5px;
+  display: table;
+  font-size: 20px;
+  border-radius: 10%;
+  display: inline;
 }
-label.error:after{
-	content:"eroare";
-	color:red;
-	padding:10px;
+.desc {
+  display: table;
+  margin-bottom: 10px;
 }
-.results{
-	background:white;
-  display:flex;
-	align-items:center;
-	justify-content:center;
-  padding:10px;
+
+form {
+  margin-top: 10px;
 }
-canvas{
-	background:#f2f2f2;
-	margin:10px;
-	top:3px;
+.inputs span > * {
+  display: table;
 }
-.numeric-results{
-	display:flex;
-	flex-direction:column;
+.inputs input {
+  margin-bottom: 5px;
+  margin-top: 2px;
 }
-.plot-explanation{
-	
+input[type="text"],
+input[type="number"] {
+  background: #eee;
+  border: none;
+  padding: 5px;
+  border: 2px solid white;
 }
-.plot{
+input[type="text"]:hover,
+input[type="number"]:hover {
+  border-color: #3c85a8;
 }
-.numeric-results label{
-	background:blueviolet;
-	color:white;
-	padding:3px;
-	display:flex
+input[type="submit"] {
+  background: limegreen;
+  border: 2px solid limegreen;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
 }
-.formula label{
-	display:table;
-  background:blueviolet;
-	color:white;
-	margin-right:5px;
-	padding:5px;
-	border-radius:3px;
+input[type="submit"]:hover {
+  background: white;
+  color: limegreen;
 }
-.formulas{
-	display:flex;
+label.error:after {
+  content: "eroare";
+  color: red;
+  padding: 10px;
 }
-.wrap{
-	background:white;
-	box-shadow:var(--shadow);
-	padding:10px;
-	margin-top:20px;
+.results {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
-.info{
-	background:#e1e0e0;
-	margin:-10px;
-	padding:10px;
-	margin-bottom:0px;
+canvas {
+  background: #f2f2f2;
+  margin: 10px;
+  top: 3px;
 }
-.plot-explanation>span{
-	display:table;
-	font-style:italic;
-	margin:3px;
+.numeric-results {
+  display: flex;
+  flex-direction: column;
 }
-.formulas *, .val-prob-teo *{
-	font-size:18px;
+.plot-explanation {
 }
-.plot-menu{
+.plot {
 }
-.plot-menu>span{
-	display:inline-table;
-  padding:10px;
-  cursor:pointer;
-	color:navy;
-	margin-bottom:-30px;
-	margin-top:-30px;
+.numeric-results label {
+  background: #3c85a8;
+  color: white;
+  padding: 3px;
+  display: flex;
 }
-.plot-menu>span:after{
-	content:"";
-	width:0%;
-	height:2px;
-	background:black;
-  display:table;
-	transition-timing-function: cubic-bezier(.86,0,.07,1);
-	transition-duration:.4s;
-	position:relative;
-	top:11px;
+.formula label {
+  display: table;
+  background: #3c85a8;
+  color: white;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 3px;
 }
-.plot-menu>span:hover:after{
-	width:100%;
+.formulas {
+  display: flex;
 }
-.plot-menu>span:hover{
-	background:#eee;
+.wrap {
+  background: white;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  margin-top: 20px;
 }
-.plot-menu-active:after{
-	width:100% !important;
+.info {
+  background: #e1e0e0;
+  margin: -10px;
+  padding: 10px;
+  margin-bottom: 0px;
 }
-.plot-data>span{
-	display:none;
+.plot-explanation > span {
+  display: table;
+  font-style: italic;
+  margin: 3px;
 }
-.plot-data>.plot-active{
-	display:table;
+.formulas *,
+.val-prob-teo * {
+  font-size: 18px;
 }
-.valori{
-	padding:10px;
-	width:500px;
+.plot-menu {
 }
-.valori>span{
-	display:table;
+.plot-menu > span {
+  display: inline-table;
+  padding: 10px;
+  cursor: pointer;
+  color: navy;
+  margin-bottom: -30px;
+  margin-top: -30px;
 }
-.plot-menu{
-	position:absolute;
-	top:-43px;
+.plot-menu > span:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: black;
+  display: table;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+  position: relative;
+  top: 11px;
 }
-.valori input{
-	margin-bottom:-5px;
+.plot-menu > span:hover:after {
+  width: 100%;
 }
-.valori>span{
-  margin-top:10px;
+.plot-menu > span:hover {
+  background: #eee;
 }
-.valori>span>label{
-	background:#f2f2f2;
-	padding:3px;
-  margin:5px
+.plot-menu-active:after {
+  width: 100% !important;
 }
-.back{
-	background:#2f2f2f;
-	color:white;
-	padding:5px;
-  border-radius:10%;
-	cursor:pointer;
-  border:2px solid #2f2f2f;
+.plot-data > span {
+  display: none;
 }
-.back:hover{
-	background:#f2f2f2;
-	color:#2f2f2f;
+.plot-data > .plot-active {
+  display: table;
+}
+.valori {
+  padding: 10px;
+  width: 500px;
+}
+.valori > span {
+  display: table;
+}
+.plot-menu {
+  position: absolute;
+  top: -43px;
+}
+.valori input {
+  margin-bottom: -5px;
+}
+.valori > span {
+  margin-top: 10px;
+}
+.valori > span > label {
+  background: #f2f2f2;
+  padding: 3px;
+  margin: 5px;
+}
+.back,
+.back2 {
+  background: #3c85a8;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid #00689a;
+  color: white;
+}
+.back:hover,
+.back2:hover {
+  background: #f2f2f2;
+  color: #2f2f2f;
+}
+canvas {
+  width: 100% !important;
+}
+.plot-explanation {
+  left: 30px;
 }

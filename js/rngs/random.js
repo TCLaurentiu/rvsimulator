@@ -1,1 +1,1 @@
-let random=Math.random;
+let random = Math.random;
